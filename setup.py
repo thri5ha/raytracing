@@ -156,6 +156,5 @@ setup(
         'tqdm',
         'matplotlib',
         'dearpygui',
-        'wheels'
     ],
 )

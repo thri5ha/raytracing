@@ -2,7 +2,10 @@ import os
 from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
-_src_path = os.path.dirname(os.path.abspath(__file__))
+try:
+    _src_path = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    _src_path = os.getcwd()
 
 # ref: https://github.com/sxyu/sdf/blob/master/setup.py
 def find_eigen(min_ver=(3, 3, 0)):

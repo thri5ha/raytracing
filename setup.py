@@ -1,5 +1,6 @@
 import os
-from setuptools import setup
+# from setuptools import setup
+from distutils.core import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 try:
@@ -155,5 +156,6 @@ setup(
         'tqdm',
         'matplotlib',
         'dearpygui',
+        'wheels'
     ],
 )
